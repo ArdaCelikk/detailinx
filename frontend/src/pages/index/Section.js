@@ -22,7 +22,7 @@ const Section = () => {
                 </div>
 
                 <div class="mt-8 lg:w-1/2 lg:px-4 lg:mt-0">
-                    <img class="object-cover w-full rounded-xl h-96  shadow-lg" src="/assets/index_polishing_picture.avif"/>
+                    <img class="object-cover w-full rounded-xl h-96  shadow-lg" src="/assets/index/index_polishing_picture.avif"/>
                 </div>
             </div>
         </section>

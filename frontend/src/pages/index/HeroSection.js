@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroSection = () => {
     return (
-        <div  class="relative bg-cover bg-center" style={{height: "calc(100vh - 150px)", backgroundImage: "url(/assets/mainpic.jpg)" }}>
+        <div  class="relative bg-cover bg-center z-10" style={{height: "calc(100vh - 150px)", backgroundImage: "url(/assets/index/mainpic.jpg)" }}>
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
             <div class="relative flex items-center justify-center h-full text-white text-center">
