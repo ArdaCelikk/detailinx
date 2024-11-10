@@ -10,7 +10,7 @@ import Footer from '../../components/Footer'
 const IndexPage = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar indexPage={true} />
 
       <main>
         <HeroSection />

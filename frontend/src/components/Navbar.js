@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const Navbar = (e) => {
+const Navbar = (props) => {
     const [flyout, setFlyout] = useState(false)
     const [mobileFlyout, setMobileFlyout] = useState(true)
     const [placeOfElement, setPlaceOfElement] = useState(false)
@@ -15,12 +15,12 @@ const Navbar = (e) => {
         }
     }, [flyout])
     return (
-        <header class=" absolute top-0 left-0 z-20 w-full">
+        <header class={`${!props.indexPage && "bg-gray-700"} absolute top-0 left-0 z-20 w-full`}>
             <nav class="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">DetalinX</span>
-                        <img class="h-8 w-auto" src="/assets/logo.png" alt="" />
+                        <img class="h-8 w-auto" src="/logo.png" alt="" />
                     </a>
                 </div>
                 <div class={`flex lg:hidden ${mobileMenu && "opacity-0"}`}>
@@ -41,7 +41,7 @@ const Navbar = (e) => {
                         </button>
 
 
-                        <div class={`${flyout ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"} ${!placeOfElement && "sr-only" } transition ease-out duration-200 absolute -left-8 top-full mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5`}>
+                        <div class={`${flyout ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"} ${!placeOfElement && "sr-only"} transition ease-out duration-200 absolute -left-8 top-full mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5`}>
                             <div class="p-4" >
                                 <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
                                     <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">

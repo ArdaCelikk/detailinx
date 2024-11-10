@@ -7,6 +7,8 @@ import { Provider } from 'react-redux';
 import store from "./redux/store"
 import axios from "axios"
 import IndexPage from './pages/index/IndexPage';
+import ContactUsPage from './pages/contactus/ContactUsPage';
+import NotFoundPage from "./components/NotFoundPage"
 
 // store.dispatch(readPagesSettings(settings.pages));
 
@@ -39,17 +41,21 @@ const router = createBrowserRouter([
     path: "/",
     element: <IndexPage />
   },
-  // {
-  //   path: "*",
-  //   element: <NotFoundPage />
-  // }
+  {
+    path: "/iletisim",
+    element: <ContactUsPage />
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />
+  }
 ])
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store} >
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </Provider>
 );
 
