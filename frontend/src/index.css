@@ -1,0 +1,146 @@
+:root {
+  /* Base Colors */
+  --primary-blue: #0066FF;
+  --secondary-blue: #00A3FF;
+  --dark-bg: #0B0F1A;
+  --darker-bg: #070B14;
+  --light-text: #FFFFFF;
+  --gray-text: #A0A0A0;
+  
+  /* Gradient Colors */
+  --gradient-dark-1: rgba(7, 11, 20, 1);
+  --gradient-dark-2: rgba(11, 15, 26, 0.98);
+  --gradient-blue: rgba(0, 102, 255, 0.15);
+  --gradient-purple: rgba(89, 0, 255, 0.15);
+  --gradient-cyan: rgba(0, 217, 255, 0.15);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--darker-bg);
+  color: var(--light-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: 
+    radial-gradient(
+      circle at 20% 0%,
+      var(--gradient-purple) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      var(--gradient-blue) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      var(--gradient-cyan) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* Section Transitions */
+.section-transition {
+  position: relative;
+}
+
+.section-transition::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(180deg,
+    var(--gradient-dark-1) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.section-transition::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(0deg,
+    var(--gradient-dark-1) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Common Text Gradients */
+.gradient-text {
+  background: linear-gradient(180deg, 
+    var(--light-text) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Common Card Styles */
+.gradient-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+}
+
+/* Common Button Styles */
+.gradient-button {
+  background: linear-gradient(135deg,
+    var(--primary-blue) 0%,
+    var(--secondary-blue) 100%
+  );
+  transition: filter 0.2s ease;
+}
+
+.gradient-button:hover {
+  filter: brightness(1.1);
+}
+
+/* Transitions */
+.transition-all {
+  transition: all 0.2s ease;
+}
+
+/* Blur Overlay */
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(100px);
+  pointer-events: none;
+} 

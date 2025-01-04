@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from "react-router-dom"
 
 const Navbar = (props) => {
     const [flyout, setFlyout] = useState(false)
@@ -18,10 +19,10 @@ const Navbar = (props) => {
         <header class={`${!props.indexPage && "bg-gray-700"} absolute top-0 left-0 z-20 w-full`}>
             <nav class="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5">
+                    <Link to="/" class="-m-1.5 p-1.5">
                         <span class="sr-only">DetalinX</span>
                         <img class="h-8 w-auto" src="/logo.png" alt="" />
-                    </a>
+                    </Link>
                 </div>
                 <div class={`flex lg:hidden ${mobileMenu && "opacity-0"}`}>
                     <button type="button" onClick={() => setMobileMenu(current => !current)} class={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200`}>
@@ -51,7 +52,7 @@ const Navbar = (props) => {
                                         </svg>
                                     </div>
                                     <div class="flex-auto">
-                                        <a href="#" class="block font-semibold text-gray-900">
+                                        <a class="block font-semibold text-gray-900">
                                             Analytics
                                             <span class="absolute inset-0"></span>
                                         </a>
@@ -65,7 +66,7 @@ const Navbar = (props) => {
                                         </svg>
                                     </div>
                                     <div class="flex-auto">
-                                        <a href="#" class="block font-semibold text-gray-900">
+                                        <a class="block font-semibold text-gray-900">
                                             Engagement
                                             <span class="absolute inset-0"></span>
                                         </a>
@@ -79,7 +80,7 @@ const Navbar = (props) => {
                                         </svg>
                                     </div>
                                     <div class="flex-auto">
-                                        <a href="#" class="block font-semibold text-gray-900">
+                                        <a class="block font-semibold text-gray-900">
                                             Security
                                             <span class="absolute inset-0"></span>
                                         </a>
@@ -93,7 +94,7 @@ const Navbar = (props) => {
                                         </svg>
                                     </div>
                                     <div class="flex-auto">
-                                        <a href="#" class="block font-semibold text-gray-900">
+                                        <a class="block font-semibold text-gray-900">
                                             Integrations
                                             <span class="absolute inset-0"></span>
                                         </a>
@@ -107,7 +108,7 @@ const Navbar = (props) => {
                                         </svg>
                                     </div>
                                     <div class="flex-auto">
-                                        <a href="#" class="block font-semibold text-gray-900">
+                                        <a class="block font-semibold text-gray-900">
                                             Automations
                                             <span class="absolute inset-0"></span>
                                         </a>
@@ -116,13 +117,13 @@ const Navbar = (props) => {
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                                <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+                                <a class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
                                     <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                                         <path fill-rule="evenodd" d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z" clip-rule="evenodd" />
                                     </svg>
                                     Watch demo
                                 </a>
-                                <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+                                <a class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
                                     <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                                         <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd" />
                                     </svg>
@@ -132,9 +133,9 @@ const Navbar = (props) => {
                         </div>
                     </div>
 
-                    <a href="#" class="text-sm/6 font-semibold text-white">Hizmetlerimiz</a>
-                    <a href="#" class="text-sm/6 font-semibold text-white">İşlerimiz</a>
-                    <a href="#" class="text-sm/6 font-semibold text-white">İletişim</a>
+                    <Link to="" class="text-sm/6 font-semibold text-white">Hizmetlerimiz</Link>
+                    <Link to="" class="text-sm/6 font-semibold text-white">İşlerimiz</Link>
+                    <Link to="/iletisim" class="text-sm/6 font-semibold text-white">İletişim</Link>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                     {/* <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a> */}
@@ -147,10 +148,10 @@ const Navbar = (props) => {
                 <div class="fixed inset-0 z-10"></div>
                 <div class="fixed bg-black bg-opacity-50 inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div class="flex items-center justify-between">
-                        <a href="#" class="-m-1.5 p-1.5">
+                        <Link to="/" class="-m-1.5 p-1.5">
                             <span class="sr-only">DetailinX</span>
-                            <img class="h-8 w-auto" src="/assets/logo.png" alt="" />
-                        </a>
+                            {/* <img class="h-8 w-auto" src="/assets/logo.png" alt="" /> */}
+                        </Link>
                         <button onClick={() => setMobileMenu(current => !current)} type="button" class="-m-2.5 rounded-md p-2.5 text-gray-300">
                             <span class="sr-only">Close menu</span>
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
@@ -165,22 +166,22 @@ const Navbar = (props) => {
                                     <button type="button" onClick={() => setMobileFlyout(current => !current)} class={` flex w-full items-center justify-between transition rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-white hover:bg-gray-50 bg-white bg-opacity-30 hover:text-gray-900`} aria-controls="disclosure-1" aria-expanded="false">
                                         Ürünlerimiz
                                         <svg class={`${mobileFlyout && "rotate-180"} h-5 w-5 flex-none`} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                            <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                                         </svg>
                                     </button>
                                     <div class={`mt-2 space-y-2 ${!mobileFlyout && "hidden"}`} id="disclosure-1">
-                                        <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Engagement</a>
-                                        <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Analytics</a>
-                                        <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Security</a>
-                                        <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Integrations</a>
-                                        <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Automations</a>
-                                        <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Watch demo</a>
-                                        <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Contact sales</a>
+                                        <Link to={""} class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Engagement</Link>
+                                        <Link to={""} class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Analytics</Link>
+                                        <Link to={""} class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Security</Link>
+                                        <Link to={""} class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Integrations</Link>
+                                        <Link to={""} class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Automations</Link>
+                                        <Link to={""} class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Watch demo</Link>
+                                        <Link to={""} class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-white bg-blue-400 transition hover:bg-blue-500 bg-opacity-60">Contact sales</Link>
                                     </div>
                                 </div>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-900 bg-white bg-opacity-30 transition hover:bg-gray-50">Hizmetlerimiz</a>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-900 bg-white bg-opacity-30 transition hover:bg-gray-50">İşlerimiz</a>
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-900 bg-white bg-opacity-30 transition hover:bg-gray-50">İletişim</a>
+                                <Link to="" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-900 bg-white bg-opacity-30 transition hover:bg-gray-50">Hizmetlerimiz</Link>
+                                <Link to="" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-900 bg-white bg-opacity-30 transition hover:bg-gray-50">İşlerimiz</Link>
+                                <Link to="/iletisim" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-gray-900 bg-white bg-opacity-30 transition hover:bg-gray-50">İletişim</Link>
                             </div>
                             {/* <div class="py-6">
                                 <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>

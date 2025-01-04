@@ -13,7 +13,7 @@ const HeroSection = () => {
                             Size en hızlı ve en kaliteli hizmeti sunmak için buradayız!
                         </p>
                         <div class="flex md:items-center md:justify-start justify-center">
-                            <button class="w-36 h-12 rounded-full bg-indigo-600 transition-all duration-700 hover:bg-indigo-800 shadow text-white text-center text-base font-semibold leading-6">Contact Us</button>
+                            <button class="w-36 h-12 rounded-full bg-indigo-600 transition-all duration-700 hover:bg-indigo-800 shadow text-white text-center text-base font-semibold leading-6">Ulaş</button>
                         </div>
                     </div>
                     <div class="border-l-2 md:border-indigo-600 border-white px-10 py-6">
@@ -30,34 +30,34 @@ const HeroSection = () => {
                 <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
                     <div class="h-96 relative flex justify-center">
                         <div class="w-full h-full absolute bg-gradient-to-t from-gray-800/50 to-gray-600/50"></div>
-                        <img src="https://pagedone.io/asset/uploads/1696246502.png" alt="United Kingdom image" class="w-full h-full object-cover" />
+                        <img src="/assets/contactus/mobile_detailing.jpg" alt="United Kingdom image" class="w-full h-full object-cover" />
                         <div class="absolute bottom-0 mb-6 text-center px-6">
-                            <h5 class="text-white text-lg font-semibold leading-7 mb-2">United Kingdom</h5>
-                            <p class="text-white text-base font-medium leading-6">123 High Street, Westminster, London</p>
+                            <h5 class="text-white text-lg font-semibold leading-7 mb-2">Mobil Temizlik</h5>
+                            <p class="text-white text-base font-small leading-6">Elektrik ve suyunuzu kullanmamıza izin verin aracınızı istediğiniz yerde yıkayalım</p>
                         </div>
                     </div>
                     <div class="h-96 relative flex justify-center">
                         <div class="w-full h-full absolute bg-gradient-to-t from-gray-800/50 to-gray-600/50"></div>
-                        <img src="https://pagedone.io/asset/uploads/1696246522.png" alt="Germany image" class="w-full h-full  object-cover" />
+                        <img src="/assets/contactus/detailing.avif" alt="Germany image" class="w-full h-full  object-cover" />
                         <div class="absolute bottom-0 mb-6 text-center px-6">
-                            <h5 class="text-white text-lg font-semibold leading-7 mb-2">Germany</h5>
-                            <p class="text-white text-base font-medium leading-6">101 Unter den Linden, Mitte <br />District, Berlin</p>
+                            <h5 class="text-white text-lg font-semibold leading-7 mb-2">Detaylı Temizlik</h5>
+                            <p class="text-white text-base font-small leading-6">Aracınızı en ince detaylarına kadar temizleyip aracınızı ilk günki haline getirelim</p>
                         </div>
                     </div>
                     <div class="h-96 relative flex justify-center">
                         <div class="w-full h-full absolute bg-gradient-to-t from-gray-800/50 to-gray-600/50"></div>
-                        <img src="https://pagedone.io/asset/uploads/1696246551.png" alt="France image" class="w-full h-full  object-cover" />
+                        <img src="/assets/contactus/polish.jpg" alt="France image" class="w-full h-full  object-cover" />
                         <div class="absolute bottom-0 mb-6 text-center px-6">
-                            <h5 class="text-white text-lg font-semibold leading-7 mb-2">France</h5>
-                            <p class="text-white text-base font-medium leading-6">456 Rue de la Paix, 8th Arrondissement, Paris</p>
+                            <h5 class="text-white text-lg font-semibold leading-7 mb-2">Boya Koruma & Parlatma</h5>
+                            <p class="text-white text-base font-small leading-6">Aracınınzdaki çizikleri minimum seviyeye indirelim</p>
                         </div>
                     </div>
                     <div class="h-96 relative flex justify-center">
                         <div class="w-full h-full absolute bg-gradient-to-t from-gray-800/50 to-gray-600/50"></div>
-                        <img src="https://pagedone.io/asset/uploads/1696246565.png" alt="Switzerland image" class="w-full h-full  object-cover" />
+                        <img src="/assets/contactus/ceramicoating.webp" alt="Switzerland image" class="w-full h-full object-cover" />
                         <div class="absolute bottom-0 mb-6 text-center px-6">
-                            <h5 class="text-white text-lg font-semibold leading-7 mb-2">Switzerland</h5>
-                            <p class="text-white text-base font-medium leading-6">987 Bahnhofstrasse, Zurich <br /> City Center, Zurich</p>
+                            <h5 class="text-white text-lg font-semibold leading-7 mb-2">Seramik Kaplama</h5>
+                            <p class="text-white text-base font-small leading-6">Seramik kaplama ile aracnınızın boyasını güneş ışınlarından ve kılcal çiziklerden koruyalım</p>
                         </div>
                     </div>
                 </div>
