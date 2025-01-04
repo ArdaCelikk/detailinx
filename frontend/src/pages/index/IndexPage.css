@@ -35,10 +35,10 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, 
-    rgba(0, 102, 255, 0.15) 0%, 
-    rgba(0, 102, 255, 0.05) 50%, 
-    transparent 100%);
+  background: radial-gradient(circle at bottom left, 
+    rgba(0, 102, 255, 0.1) 0%, 
+    rgba(0, 102, 255, 0.05) 25%, 
+    transparent 50%);
 }
 
 .about-section h2 {
@@ -86,10 +86,10 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(225deg, 
-    rgba(0, 102, 255, 0.15) 0%, 
-    rgba(0, 102, 255, 0.05) 50%, 
-    transparent 100%);
+  background: radial-gradient(circle at top right, 
+    rgba(0, 102, 255, 0.1) 0%, 
+    rgba(0, 102, 255, 0.05) 25%, 
+    transparent 50%);
 }
 
 .why-choose-us h2 {
@@ -186,10 +186,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, 
-    rgba(0, 102, 255, 0.25) 0%, 
-    rgba(0, 102, 255, 0.15) 50%, 
-    transparent 100%);
+  background: radial-gradient(circle at center, 
+    rgba(0, 102, 255, 0.2) 0%, 
+    rgba(0, 102, 255, 0.1) 25%, 
+    transparent 50%);
 }
 
 .cta-section h2 {

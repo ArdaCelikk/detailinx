@@ -1,60 +1,145 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import './OurWorks.css';
 
 const OurWorks = () => {
-    return (
-        <section class="container px-6 py-8 mx-auto lg:py-16">
-            <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl ">Hizmetlerimiz</h3>
+  const [activeFilter, setActiveFilter] = useState('all');
 
-            <div class="flex items-center py-6 mt-4 -mx-2 overflow-x-auto whitespace-nowrap">
-                <button
-                    class=" inline-flex px-4 mx-2 focus:outline-none  items-center py-0.5 text-white bg-indigo-500 hover:bg-indigo-400 duration-300 transition-colors rounded-2xl">Mobil Araç Yıkama</button>
-                <button
-                    class=" inline-flex px-4 mx-2 duration-300 transition-colors hover:bg-indigo-500/70 hover:text-white text-gray-500 focus:outline-none py-0.5 cursor-pointer rounded-2xl">Detaylı Temizlik</button>
-                <button
-                    class=" inline-flex px-4 mx-2 duration-300 transition-colors hover:bg-indigo-500/70 hover:text-white text-gray-500 focus:outline-none py-0.5 cursor-pointer rounded-2xl">Boya Parlatma & Düzeltme</button>
-                <button
-                    class=" inline-flex px-4 mx-2 duration-300 transition-colors hover:bg-indigo-500/70 hover:text-white text-gray-500 focus:outline-none py-0.5 cursor-pointer rounded-2xl">Sermik Kaplama</button>
-            </div>
+  const filters = [
+    { id: 'all', label: 'All Works' },
+    { id: 'mobile', label: 'Mobile Detailing' },
+    { id: 'detailing', label: 'Detailing' },
+    { id: 'polish', label: 'Paint Correction' },
+    { id: 'ceramic', label: 'Ceramic Coating' }
+  ];
 
-            <div class="grid grid-cols-1 gap-10 mt-10 md:grid-cols-2 lg:grid-cols-3 ">
-                <a href="#" class="transition-all duration-500 lg:col-span-2 hover:scale-105">
-                    <img class="object-cover object-middle w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96"
-                        src="/assets/index/itsnotalwaysintheshop.jpg"
-                        alt="" />
-                </a>
+  const works = [
+    {
+      id: 1,
+      title: 'Premium Mobile Detailing',
+      category: 'mobile',
+      image: '/assets/index/itsnotalwaysintheshop.jpg',
+      size: 'large'
+    },
+    {
+      id: 2,
+      title: 'Professional Paint Correction',
+      category: 'polish',
+      image: '/assets/index/brushing.jpg',
+      size: 'small'
+    },
+    {
+      id: 3,
+      title: 'Interior Detailing',
+      category: 'detailing',
+      image: '/assets/index/logomockup1.jpg',
+      size: 'small'
+    },
+    {
+      id: 4,
+      title: 'Ceramic Protection',
+      category: 'ceramic',
+      image: '/assets/index/ceramicoating.webp',
+      size: 'large'
+    },
+    {
+      id: 5,
+      title: 'Full Vehicle Detail',
+      category: 'detailing',
+      image: '/assets/index/cleancar.jpg',
+      size: 'large'
+    },
+    {
+      id: 6,
+      title: 'Paint Enhancement',
+      category: 'polish',
+      image: '/assets/index/polishing_2.jpg',
+      size: 'small'
+    }
+  ];
 
-                <a href="#" class="transition-all duration-500 hover:scale-105">
-                    <img class="object-cover object-top w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96 "
-                        src="/assets/index/brushing.jpg"
-                        alt="" />
-                </a>
+  const filteredWorks = activeFilter === 'all' 
+    ? works 
+    : works.filter(work => work.category === activeFilter);
 
-                <a href="#" class="transition-all duration-500 hover:scale-105">
-                    <img class="object-cover w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96"
-                        src="/assets/index/logomockup1.jpg"
-                        alt="" />
-                </a>
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
 
-                <a href="#" class="transition-all duration-500 lg:col-span-2 hover:scale-105">
-                    <img class="object-cover object-top w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96"
-                        src="/assets/index/ceramicoating.webp"
-                        alt="" />
-                </a>
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
 
-                <a href="#" class="transition-all duration-500 lg:col-span-2 hover:scale-105">
-                    <img class="object-cover object-top w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96"
-                        src="/assets/index/cleancar.jpg"
-                        alt="" />
-                </a>
+  return (
+    <section className="works-section">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="works-header"
+        >
+          <div className="badge">Our Portfolio</div>
+          <h2>Featured Works</h2>
+          <p>Discover our commitment to excellence through our showcase of premium detailing services</p>
+        </motion.div>
 
-                <a href="#" class="transition-all duration-500 hover:scale-105">
-                    <img class="object-cover object-top w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96"
-                        src="/assets/index/polishing_2.jpg"
-                        alt="" />
-                </a>
-            </div>
-        </section>
-    )
-}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="filter-buttons"
+        >
+          {filters.map(filter => (
+            <button
+              key={filter.id}
+              className={`filter-button ${activeFilter === filter.id ? 'active' : ''}`}
+              onClick={() => setActiveFilter(filter.id)}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </motion.div>
 
-export default OurWorks
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="works-grid"
+        >
+          {filteredWorks.map(work => (
+            <motion.div
+              key={work.id}
+              variants={itemVariants}
+              transition={{ duration: 0.5 }}
+              className={`work-item ${work.size}`}
+            >
+              <img 
+                src={work.image} 
+                alt={work.title} 
+                className="work-image"
+              />
+              <div className="work-overlay">
+                <h3 className="work-title">{work.title}</h3>
+                <span className="work-category">
+                  {filters.find(f => f.id === work.category)?.label}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default OurWorks;

@@ -9,6 +9,7 @@ import axios from "axios"
 import IndexPage from './pages/index/IndexPage';
 import ContactUsPage from './pages/contactus/ContactUsPage';
 import NotFoundPage from "./components/NotFoundPage"
+import ContactUs from './pages/contactus/ContactUs';
 
 // store.dispatch(readPagesSettings(settings.pages));
 
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/iletisim",
-    element: <ContactUsPage />
+    element: <ContactUs />
   },
   {
     path: "*",

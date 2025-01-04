@@ -14,24 +14,11 @@ const IndexPage = () => {
       
       <main>
         <HeroSection />
+        <OurWorks />
         
-        {/* About Us Section */}
-        <motion.section 
-          className="about-section"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="container">
-            <h2>Premium Auto Detailing Services</h2>
-            <p>We provide professional car detailing services with attention to every detail. 
-               Our experienced team uses the latest techniques and premium products to restore 
-               and protect your vehicle's appearance.</p>
-          </div>
-        </motion.section>
+        
 
         <OurServices />
-        <OurWorks />
 
         {/* Why Choose Us Section */}
         <motion.section 
@@ -66,15 +53,6 @@ const IndexPage = () => {
             </div>
           </div>
         </motion.section>
-
-        {/* Call to Action Section */}
-        <section className="cta-section">
-          <div className="container">
-            <h2>Ready to Transform Your Vehicle?</h2>
-            <p>Book your appointment today and experience the difference</p>
-            <button className="cta-button">Book Now</button>
-          </div>
-        </section>
       </main>
       
       <Footer />
