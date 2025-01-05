@@ -78,8 +78,9 @@ const Navbar = (props) => {
                         </div>
                     </div>
 
-                    <Link to="" className="text-sm font-medium text-gray-200 hover:text-white transition-colors duration-300 whitespace-nowrap">Hizmetlerimiz</Link>
-                    <Link to="" className="text-sm font-medium text-gray-200 hover:text-white transition-colors duration-300 whitespace-nowrap">İşlerimiz</Link>
+                    <Link to="/arabalar" className="text-sm font-medium text-gray-200 hover:text-white transition-colors duration-300 whitespace-nowrap">Arabalar</Link>
+                    <Link to="/galeri" className="text-sm font-medium text-gray-200 hover:text-white transition-colors duration-300 whitespace-nowrap">Fotoğraf Galerisi</Link>
+                    <Link to="/hizmetler" className="text-sm font-medium text-gray-200 hover:text-white transition-colors duration-300 whitespace-nowrap">Hizmetlerimiz</Link>
                     <Link to="/iletisim" className="text-sm font-medium text-gray-200 hover:text-white transition-colors duration-300 whitespace-nowrap">İletişim</Link>
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -106,7 +107,7 @@ const Navbar = (props) => {
                             <div className="space-y-2 py-6">
                                 <div className="-mx-3">
                                     <button type="button" onClick={() => setMobileFlyout(current => !current)} className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold text-gray-200 hover:bg-white/5 transition-all duration-300" aria-controls="disclosure-1" aria-expanded="false">
-                                        Ürünlerimiz
+                                        Ürünler
                                         <svg className={`${mobileFlyout ? "rotate-180" : ""} h-5 w-5 flex-none text-gray-400 transition-transform duration-300`} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                             <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
                                         </svg>
@@ -123,13 +124,18 @@ const Navbar = (props) => {
                                         ))}
                                     </div>
                                 </div>
-                                {['Hizmetlerimiz', 'İşlerimiz', 'İletişim'].map((item, index) => (
+                                {[
+                                    { name: 'Arabalar', path: '/arabalar' },
+                                    { name: 'Fotoğraf Galerisi', path: '/galeri' },
+                                    { name: 'Hizmetlerimiz', path: '/hizmetler' },
+                                    { name: 'İletişim', path: '/iletisim' }
+                                ].map((item, index) => (
                                     <Link 
                                         key={index}
-                                        to={item === 'İletişim' ? '/iletisim' : ''} 
+                                        to={item.path}
                                         className="block -mx-3 rounded-lg px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-300"
                                     >
-                                        {item}
+                                        {item.name}
                                     </Link>
                                 ))}
                             </div>

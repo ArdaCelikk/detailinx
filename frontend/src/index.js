@@ -10,6 +10,11 @@ import IndexPage from './pages/index/IndexPage';
 import ContactUsPage from './pages/contactus/ContactUsPage';
 import NotFoundPage from "./components/NotFoundPage"
 import ContactUs from './pages/contactus/ContactUs';
+import ServicesPage from './pages/services/ServicesPage';
+import WorksPage from './pages/works/WorksPage';
+import CarGallery from './pages/cars/CarGallery';
+import CarDetails from './pages/cars/CarDetails';
+
 
 // store.dispatch(readPagesSettings(settings.pages));
 
@@ -45,6 +50,22 @@ const router = createBrowserRouter([
   {
     path: "/iletisim",
     element: <ContactUs />
+  },
+  {
+    path: "/hizmetler",
+    element: <ServicesPage />
+  },
+  {
+    path: "/galeri",
+    element: <WorksPage />
+  },
+  {
+    path: "/arabalar",
+    element: <CarGallery />
+  },
+  {
+    path: "/araba/:id",
+    element: <CarDetails />
   },
   {
     path: "*",

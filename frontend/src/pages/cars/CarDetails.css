@@ -1,0 +1,31 @@
+.car-details-page {
+    background-color: var(--darker-bg);
+    color: var(--light-text);
+    min-height: 100vh;
+    position: relative;
+}
+
+.car-header {
+    position: relative;
+    background: radial-gradient(circle at center, rgba(29, 78, 216, 0.15), transparent 80%);
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.car-header h1 {
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+@media (max-width: 768px) {
+    .car-header {
+        padding-top: 2rem;
+    }
+    
+    .car-header h1 {
+        font-size: 2rem;
+    }
+}

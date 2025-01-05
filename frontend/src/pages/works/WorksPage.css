@@ -1,0 +1,74 @@
+.works-page {
+  background-color: var(--darker-bg);
+  color: var(--light-text);
+  min-height: 100vh;
+  position: relative;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.works-hero {
+  position: relative;
+  background: radial-gradient(circle at center, rgba(29, 78, 216, 0.15), transparent 80%);
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.works-hero h1 {
+  background: linear-gradient(to right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+.works-content {
+  position: relative;
+  z-index: 1;
+}
+
+.work-card {
+  position: relative;
+  background: rgba(17, 24, 39, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.2);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2),
+              0 10px 10px -5px rgba(0, 0, 0, 0.1),
+              0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+.work-card img {
+  filter: brightness(0.9);
+}
+
+.work-card:hover img {
+  filter: brightness(1);
+}
+
+@media (max-width: 768px) {
+  .works-hero {
+    min-height: 50vh;
+  }
+  
+  .works-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .works-content {
+    padding: 3rem 0;
+  }
+} 

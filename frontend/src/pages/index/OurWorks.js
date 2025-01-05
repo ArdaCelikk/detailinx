@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import './OurWorks.css';
 
 const OurWorks = () => {
@@ -63,8 +63,9 @@ const OurWorks = () => {
     : works.filter(work => work.category === activeFilter);
 
   const containerVariants = {
-    hidden: {},
+    hidden: { opacity: 0 },
     visible: {
+      opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
@@ -72,8 +73,27 @@ const OurWorks = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { 
+      opacity: 0,
+      y: 20,
+      scale: 0.95
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      scale: 0.95,
+      transition: {
+        duration: 0.3
+      }
+    }
   };
 
   return (
@@ -112,30 +132,34 @@ const OurWorks = () => {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate="visible"
           className="works-grid"
         >
-          {filteredWorks.map(work => (
-            <motion.div
-              key={work.id}
-              variants={itemVariants}
-              transition={{ duration: 0.5 }}
-              className={`work-item ${work.size}`}
-            >
-              <img 
-                src={work.image} 
-                alt={work.title} 
-                className="work-image"
-              />
-              <div className="work-overlay">
-                <h3 className="work-title">{work.title}</h3>
-                <span className="work-category">
-                  {filters.find(f => f.id === work.category)?.label}
-                </span>
-              </div>
-            </motion.div>
-          ))}
+          <AnimatePresence mode="wait">
+            {filteredWorks.map(work => (
+              <motion.div
+                key={work.id}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                layout
+                className={`work-item ${work.size}`}
+              >
+                <img 
+                  src={work.image} 
+                  alt={work.title} 
+                  className="work-image"
+                />
+                <div className="work-overlay">
+                  <h3 className="work-title">{work.title}</h3>
+                  <span className="work-category">
+                    {filters.find(f => f.id === work.category)?.label}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </motion.div>
       </div>
     </section>
