@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { useLanguage } from '../../context/LanguageContext';
 import './CarGallery.css';
 
 // Temporary data for demonstration
@@ -13,7 +14,7 @@ const cars = [
         model: "M4 Competition",
         year: 2023,
         color: "Sao Paulo Yellow",
-        services: ["Ceramic Coating", "Paint Protection Film"],
+        services: ["ceramicCoating", "paintProtection"],
         mainImage: "/images/cars/bmw-m4.jpg",
         date: "2023-12-15"
     },
@@ -23,7 +24,7 @@ const cars = [
         model: "AMG GT",
         year: 2022,
         color: "Selenite Grey",
-        services: ["Paint Correction", "Interior Detailing"],
+        services: ["paintCorrection", "interiorDetail"],
         mainImage: "/images/cars/mercedes-amg.jpg",
         date: "2023-12-10"
     },
@@ -34,6 +35,7 @@ function CarGallery() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedBrand, setSelectedBrand] = useState('all');
     const [selectedService, setSelectedService] = useState('all');
+    const { t, language } = useLanguage();
 
     const filteredCars = cars.filter(car => {
         const matchesSearch =
@@ -64,7 +66,7 @@ function CarGallery() {
                             transition={{ duration: 0.5 }}
                             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-6"
                         >
-                            Araç Bilgi Sistemi
+                            {t('carsTitle')}
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -72,7 +74,7 @@ function CarGallery() {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto"
                         >
-                            Aracınızın detaylarını görüntülemek için ID numarasını girin veya galeriden seçim yapın
+                            {t('carsSubtitle')}
                         </motion.p>
                     </div>
                 </section>
@@ -83,7 +85,7 @@ function CarGallery() {
                             <div className="relative">
                                 <input
                                     type="text"
-                                    placeholder="Araç ID ile arama yapın..."
+                                    placeholder={t('searchPlaceholder')}
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     className="w-full px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
@@ -130,7 +132,7 @@ function CarGallery() {
                                                                 {car.id}
                                                             </span>
                                                             <span className="text-sm text-gray-400">
-                                                                {new Date(car.date).toLocaleDateString('tr-TR')}
+                                                                {new Date(car.date).toLocaleDateString(language === 'tr' ? 'tr-TR' : 'en-US')}
                                                             </span>
                                                         </div>
                                                         <h3 className="text-xl font-semibold mb-2">
@@ -142,7 +144,7 @@ function CarGallery() {
                                                                     key={index}
                                                                     className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400"
                                                                 >
-                                                                    {service}
+                                                                    {t(service)}
                                                                 </span>
                                                             ))}
                                                         </div>

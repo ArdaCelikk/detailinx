@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Provider } from 'react-redux';
 import store from "./redux/store"
+import { LanguageProvider } from './context/LanguageContext';
 import './style.css';
 import IndexPage from './pages/index/IndexPage';
 import ContactUs from './pages/contactus/ContactUs';
@@ -75,7 +76,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store} >
-    <RouterProvider router={router} />
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
   </Provider>
 );
 

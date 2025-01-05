@@ -2,54 +2,51 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { useLanguage } from '../../context/LanguageContext';
 import './WorksPage.css';
 
 const works = [
     {
         id: 1,
         title: "BMW M4 Competition",
-        category: "Polishing",
+        category: "ceramicCoating",
         image: "/images/works/bmw-m4.jpg",
-        description: "Full paint correction and ceramic coating application"
+        description: "ceramicDesc",
+        date: "2023-12-15"
     },
     {
         id: 2,
         title: "Mercedes-AMG GT",
-        category: "Ceramic Coating",
+        category: "paintProtection",
         image: "/images/works/mercedes-amg.jpg",
-        description: "Premium ceramic coating with 5-year protection"
+        description: "paintDesc",
+        date: "2023-12-10"
     },
     {
         id: 3,
         title: "Porsche 911 GT3",
-        category: "Paint Protection",
+        category: "paintCorrection",
         image: "/images/works/porsche-gt3.jpg",
-        description: "Full front PPF and ceramic coating combo"
+        description: "paintDesc",
+        date: "2023-12-05"
     },
     {
         id: 4,
         title: "Audi RS6",
-        category: "Interior Detailing",
+        category: "interiorDetail",
         image: "/images/works/audi-rs6.jpg",
-        description: "Complete interior restoration and leather treatment"
-    },
-    {
-        id: 5,
-        title: "Range Rover Sport",
-        category: "Detailed Cleaning",
-        image: "/images/works/range-rover.jpg",
-        description: "Exterior and interior deep cleaning"
-    },
-    {
-        id: 6,
-        title: "Tesla Model S",
-        category: "Paint Protection",
-        image: "/images/works/tesla.jpg",
-        description: "Full body PPF installation"
+        description: "interiorDesc",
+        date: "2023-12-01"
     }
 ];
 
-const categories = ["Tümü", "Polishing", "Ceramic Coating", "Paint Protection", "Interior Detailing", "Detailed Cleaning"];
+const categories = [
+    { id: 'all', name: 'allWorks' },
+    { id: 'ceramicCoating', name: 'ceramicCoating' },
+    { id: 'paintProtection', name: 'paintProtection' },
+    { id: 'paintCorrection', name: 'paintCorrection' },
+    { id: 'interiorDetail', name: 'interiorDetail' }
+];
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -80,10 +77,11 @@ const itemVariants = {
 };
 
 function WorksPage() {
-    const [selectedCategory, setSelectedCategory] = useState("Tümü");
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const { t, language } = useLanguage();
 
     const filteredWorks = works.filter(work => 
-        selectedCategory === "Tümü" ? true : work.category === selectedCategory
+        selectedCategory === 'all' ? true : work.category === selectedCategory
     );
 
     return (
@@ -93,21 +91,21 @@ function WorksPage() {
             <main className="relative z-10 pt-[60px]">
                 <section className="works-hero pattern-grid pattern-grid-blue">
                     <div className="container mx-auto px-4 py-16 sm:py-24">
-                        <motion.h1 
+                        <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-6"
                         >
-                            Fotoğraf Galerisi
+                            {t('works')}
                         </motion.h1>
-                        <motion.p 
+                        <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto"
                         >
-                            Detaylı araç bakım ve koruma çalışmalarımızdan örnekler
+                            {t('worksSubtitle')}
                         </motion.p>
                     </div>
                 </section>
@@ -117,22 +115,22 @@ function WorksPage() {
                         <div className="flex flex-wrap justify-center gap-4 mb-12">
                             {categories.map((category, index) => (
                                 <motion.button
-                                    key={category}
-                                    onClick={() => setSelectedCategory(category)}
+                                    key={category.id}
+                                    onClick={() => setSelectedCategory(category.id)}
                                     className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
-                                        ${selectedCategory === category 
+                                        ${selectedCategory === category.id 
                                             ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25' 
                                             : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'}`}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                 >
-                                    {category}
+                                    {t(category.name)}
                                 </motion.button>
                             ))}
                         </div>
 
-                        <motion.div 
+                        <motion.div
                             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                             variants={containerVariants}
                             initial="hidden"
@@ -150,18 +148,21 @@ function WorksPage() {
                                         layout
                                     >
                                         <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
-                                            <img 
-                                                src={work.image} 
+                                            <img
+                                                src={work.image}
                                                 alt={work.title}
                                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                                 <div className="absolute bottom-0 left-0 right-0 p-6">
                                                     <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400 mb-3">
-                                                        {work.category}
+                                                        {t(work.category)}
                                                     </span>
                                                     <h3 className="text-xl font-semibold mb-2">{work.title}</h3>
-                                                    <p className="text-gray-300 text-sm">{work.description}</p>
+                                                    <p className="text-gray-300 text-sm">{t(work.description)}</p>
+                                                    <span className="block text-sm text-gray-400 mt-2">
+                                                        {new Date(work.date).toLocaleDateString(language === 'tr' ? 'tr-TR' : 'en-US')}
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
