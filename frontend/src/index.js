@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './style.css';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Provider } from 'react-redux';
 import store from "./redux/store"
-import axios from "axios"
+import './style.css';
 import IndexPage from './pages/index/IndexPage';
-import ContactUsPage from './pages/contactus/ContactUsPage';
-import NotFoundPage from "./components/NotFoundPage"
 import ContactUs from './pages/contactus/ContactUs';
 import ServicesPage from './pages/services/ServicesPage';
 import WorksPage from './pages/works/WorksPage';
 import CarGallery from './pages/cars/CarGallery';
 import CarDetails from './pages/cars/CarDetails';
+import NotFoundPage from './pages/notfound/NotFoundPage';
 
 
 // store.dispatch(readPagesSettings(settings.pages));
