@@ -1,6 +1,27 @@
 import React from 'react'
 
 const SocialMediaPosts = () => {
+    const posts = [
+        {
+            image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1000",
+            profileImage: "https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1000",
+            title: "Ceramic Coating",
+            description: "Professional ceramic coating application"
+        },
+        {
+            image: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1000",
+            profileImage: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1000",
+            title: "Interior Detailing",
+            description: "Luxury car interior detailing"
+        },
+        {
+            image: "https://images.unsplash.com/photo-1573950940509-d924ee3fd345?q=80&w=1000",
+            profileImage: "https://images.unsplash.com/photo-1535732820275-9ffd998cac22?q=80&w=1000",
+            title: "Paint Protection",
+            description: "Premium paint protection service"
+        }
+    ];
+
     return (
         <section class="container px-6 py-8 mx-auto lg:py-16">
             <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl ">Recent Blog Posts</h3>

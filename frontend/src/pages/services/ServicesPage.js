@@ -10,52 +10,32 @@ const ServicesPage = () => {
 
   const services = [
     {
-      id: 1,
+      id: 'ceramicCoating',
       title: 'ceramicCoating',
       description: 'ceramicDesc',
-      icon: 'shield-alt',
-      features: [
-        { name: 'uvProtection', icon: 'sun' },
-        { name: 'hydrophobic', icon: 'tint-slash' },
-        { name: 'warranty', icon: 'award' }
-      ],
-      image: '/assets/services/ceramic-coating.jpg'
+      image: 'https://images.unsplash.com/photo-1573950940509-d924ee3fd345?q=80&w=1000',
+      features: ['durability', 'shine', 'protection']
     },
     {
-      id: 2,
+      id: 'paintProtection',
       title: 'paintProtection',
       description: 'paintDesc',
-      icon: 'layer-group',
-      features: [
-        { name: 'scratchRemoval', icon: 'eraser' },
-        { name: 'swirlRemoval', icon: 'sync-alt' },
-        { name: 'paintEnhancement', icon: 'magic' }
-      ],
-      image: '/assets/services/paint-protection.jpg'
+      image: 'https://images.unsplash.com/photo-1558486012-817176f84c6d?q=80&w=1000',
+      features: ['scratch', 'uv', 'chemical']
     },
     {
-      id: 3,
+      id: 'interiorDetail',
       title: 'interiorDetail',
       description: 'interiorDesc',
-      icon: 'car',
-      features: [
-        { name: 'deepCleaning', icon: 'broom' },
-        { name: 'leatherCare', icon: 'chair' },
-        { name: 'odorRemoval', icon: 'wind' }
-      ],
-      image: '/assets/services/interior-detailing.jpg'
+      image: 'https://images.unsplash.com/photo-1570303345338-e1f1500c4f5a?q=80&w=1000',
+      features: ['deepClean', 'sanitize', 'protect']
     },
     {
-      id: 4,
+      id: 'exteriorDetail',
       title: 'exteriorDetail',
       description: 'exteriorDesc',
-      icon: 'spray-can',
-      features: [
-        { name: 'handWash', icon: 'hand-sparkles' },
-        { name: 'clayBar', icon: 'cube' },
-        { name: 'paintSealant', icon: 'shield-alt' }
-      ],
-      image: '/assets/services/exterior-detailing.jpg'
+      image: 'https://images.unsplash.com/photo-1535732820275-9ffd998cac22?q=80&w=1000',
+      features: ['wash', 'polish', 'wax']
     }
   ];
 

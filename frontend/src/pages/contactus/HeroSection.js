@@ -1,5 +1,24 @@
 import React from 'react'
 
+const images = [
+    {
+        src: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1000",
+        alt: "Mobile Detailing"
+    },
+    {
+        src: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1000",
+        alt: "Professional Detailing"
+    },
+    {
+        src: "https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?q=80&w=1000",
+        alt: "Paint Correction"
+    },
+    {
+        src: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1000",
+        alt: "Ceramic Coating"
+    }
+];
+
 const HeroSection = () => {
     return (
         <section class="py-24">
@@ -30,7 +49,7 @@ const HeroSection = () => {
                 <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
                     <div class="h-96 relative flex justify-center">
                         <div class="w-full h-full absolute bg-gradient-to-t from-gray-800/50 to-gray-600/50"></div>
-                        <img src="/assets/contactus/mobile_detailing.jpg" alt="United Kingdom image" class="w-full h-full object-cover" />
+                        <img src={images[0].src} alt={images[0].alt} className="w-full h-full object-cover" />
                         <div class="absolute bottom-0 mb-6 text-center px-6">
                             <h5 class="text-white text-lg font-semibold leading-7 mb-2">Mobil Temizlik</h5>
                             <p class="text-white text-base font-small leading-6">Elektrik ve suyunuzu kullanmamıza izin verin aracınızı istediğiniz yerde yıkayalım</p>
@@ -38,7 +57,7 @@ const HeroSection = () => {
                     </div>
                     <div class="h-96 relative flex justify-center">
                         <div class="w-full h-full absolute bg-gradient-to-t from-gray-800/50 to-gray-600/50"></div>
-                        <img src="/assets/contactus/detailing.avif" alt="Germany image" class="w-full h-full  object-cover" />
+                        <img src={images[1].src} alt={images[1].alt} className="w-full h-full object-cover" />
                         <div class="absolute bottom-0 mb-6 text-center px-6">
                             <h5 class="text-white text-lg font-semibold leading-7 mb-2">Detaylı Temizlik</h5>
                             <p class="text-white text-base font-small leading-6">Aracınızı en ince detaylarına kadar temizleyip aracınızı ilk günki haline getirelim</p>
@@ -46,7 +65,7 @@ const HeroSection = () => {
                     </div>
                     <div class="h-96 relative flex justify-center">
                         <div class="w-full h-full absolute bg-gradient-to-t from-gray-800/50 to-gray-600/50"></div>
-                        <img src="/assets/contactus/polish.jpg" alt="France image" class="w-full h-full  object-cover" />
+                        <img src={images[2].src} alt={images[2].alt} className="w-full h-full object-cover" />
                         <div class="absolute bottom-0 mb-6 text-center px-6">
                             <h5 class="text-white text-lg font-semibold leading-7 mb-2">Boya Koruma & Parlatma</h5>
                             <p class="text-white text-base font-small leading-6">Aracınınzdaki çizikleri minimum seviyeye indirelim</p>
@@ -54,7 +73,7 @@ const HeroSection = () => {
                     </div>
                     <div class="h-96 relative flex justify-center">
                         <div class="w-full h-full absolute bg-gradient-to-t from-gray-800/50 to-gray-600/50"></div>
-                        <img src="/assets/contactus/ceramicoating.webp" alt="Switzerland image" class="w-full h-full object-cover" />
+                        <img src={images[3].src} alt={images[3].alt} className="w-full h-full object-cover" />
                         <div class="absolute bottom-0 mb-6 text-center px-6">
                             <h5 class="text-white text-lg font-semibold leading-7 mb-2">Seramik Kaplama</h5>
                             <p class="text-white text-base font-small leading-6">Seramik kaplama ile aracnınızın boyasını güneş ışınlarından ve kılcal çiziklerden koruyalım</p>

@@ -10,25 +10,40 @@ import './CarGallery.css';
 const cars = [
     {
         id: "DX2023001",
+        image: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1000",
         brand: "BMW",
-        model: "M4 Competition",
-        year: 2023,
-        color: "Sao Paulo Yellow",
+        model: "M4",
+        year: "2023",
         services: ["ceramicCoating", "paintProtection"],
-        mainImage: "/images/cars/bmw-m4.jpg",
         date: "2023-12-15"
     },
     {
         id: "DX2023002",
+        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1000",
         brand: "Mercedes",
         model: "AMG GT",
-        year: 2022,
-        color: "Selenite Grey",
+        year: "2023",
         services: ["paintCorrection", "interiorDetail"],
-        mainImage: "/images/cars/mercedes-amg.jpg",
         date: "2023-12-10"
     },
-    // Add more cars as needed
+    {
+        id: "DX2023003",
+        image: "https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?q=80&w=1000",
+        brand: "Porsche",
+        model: "911",
+        year: "2023",
+        services: ["ceramicCoating", "exteriorDetail"],
+        date: "2023-12-05"
+    },
+    {
+        id: "DX2023004",
+        image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1000",
+        brand: "Audi",
+        model: "RS6",
+        year: "2023",
+        services: ["paintProtection", "interiorDetail"],
+        date: "2023-12-01"
+    }
 ];
 
 function CarGallery() {
@@ -53,7 +68,7 @@ function CarGallery() {
         <div className="car-gallery-page">
             <Navbar />
 
-            <main className="relative z-10 ">
+            <main className="relative z-10">
                 <section className="gallery-hero">
                     <div className="hero-background">
                         <div className="gradient-overlay"></div>
@@ -121,7 +136,7 @@ function CarGallery() {
                                         <Link to={`/araba/${car.id}`} className="block">
                                             <div className="relative overflow-hidden rounded-xl aspect-[16/10]">
                                                 <img
-                                                    src={car.mainImage}
+                                                    src={car.image}
                                                     alt={`${car.brand} ${car.model}`}
                                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                                 />

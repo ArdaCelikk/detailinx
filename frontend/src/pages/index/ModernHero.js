@@ -27,17 +27,17 @@ const ModernHero = () => {
                         
                         <div className="stats-row">
                             <div className="stat-item">
-                                <span className="stat-number">5K+</span>
-                                <span className="stat-label">{t('happyClients')}</span>
+                                <span className="stat-number">100%</span>
+                                <span className="stat-label items-center">{t('happyClients')}</span>
                             </div>
                             <div className="stat-divider"></div>
-                            <div className="stat-item">
-                                <span className="stat-number">10+</span>
+                            <div className="stat-item items-center">
+                                <span className="stat-number">3+</span>
                                 <span className="stat-label">{t('yearsExperience')}</span>
                             </div>
                             <div className="stat-divider"></div>
                             <div className="stat-item">
-                                <span className="stat-number">100%</span>
+                                <span className="stat-number items-center">100%</span>
                                 <span className="stat-label">{t('satisfactionRate')}</span>
                             </div>
                         </div>

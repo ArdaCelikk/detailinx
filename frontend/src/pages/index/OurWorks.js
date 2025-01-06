@@ -1,60 +1,74 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
 import './OurWorks.css';
 
 const OurWorks = () => {
   const [activeFilter, setActiveFilter] = useState('all');
+  const { t } = useLanguage();
 
   const filters = [
-    { id: 'all', label: 'All Works' },
-    { id: 'mobile', label: 'Mobile Detailing' },
-    { id: 'detailing', label: 'Detailing' },
-    { id: 'polish', label: 'Paint Correction' },
-    { id: 'ceramic', label: 'Ceramic Coating' }
+    { id: 'all', label: 'allWorks' },
+    { id: 'mobile', label: 'mobileDetailing' },
+    { id: 'detailing', label: 'fullDetailing' },
+    { id: 'polish', label: 'paintCorrection' },
+    { id: 'ceramic', label: 'ceramicCoating' }
   ];
 
   const works = [
     {
       id: 1,
-      title: 'Premium Mobile Detailing',
-      category: 'mobile',
-      image: '/assets/index/itsnotalwaysintheshop.jpg',
-      size: 'large'
+      title: "BMW M4 Competition",
+      category: "mobile",
+      image: "/assets/index/itsnotalwaysintheshop.jpg",
+      description: "mobileDetailing",
+      date: "2023-12-15",
+      size: "large"
     },
     {
       id: 2,
-      title: 'Professional Paint Correction',
-      category: 'polish',
-      image: '/assets/index/brushing.jpg',
-      size: 'small'
+      title: "Mercedes-AMG GT",
+      category: "polish",
+      image: "/assets/index/brushing.jpg",
+      description: "paintCorrection",
+      date: "2023-12-10",
+      size: "small"
     },
     {
       id: 3,
-      title: 'Interior Detailing',
-      category: 'detailing',
-      image: '/assets/index/logomockup1.jpg',
-      size: 'small'
+      title: "Porsche 911 GT3",
+      category: "detailing",
+      image: "/assets/index/logomockup1.jpg",
+      description: "fullDetailing",
+      date: "2023-12-05",
+      size: "small"
     },
     {
       id: 4,
-      title: 'Ceramic Protection',
-      category: 'ceramic',
-      image: '/assets/index/ceramicoating.webp',
-      size: 'large'
+      title: "Audi RS6",
+      category: "ceramic",
+      image: "/assets/index/ceramicoating.webp",
+      description: "ceramicCoating",
+      date: "2023-12-01",
+      size: "large"
     },
     {
       id: 5,
-      title: 'Full Vehicle Detail',
-      category: 'detailing',
-      image: '/assets/index/cleancar.jpg',
-      size: 'large'
+      title: "BMW M5 CS",
+      category: "detailing",
+      image: "/assets/index/cleancar.jpg",
+      description: "fullDetailing",
+      date: "2023-11-28",
+      size: "large"
     },
     {
       id: 6,
-      title: 'Paint Enhancement',
-      category: 'polish',
-      image: '/assets/index/polishing_2.jpg',
-      size: 'small'
+      title: "Porsche Cayman GT4",
+      category: "polish",
+      image: "/assets/index/polishing_2.jpg",
+      description: "paintCorrection",
+      date: "2023-11-25",
+      size: "small"
     }
   ];
 
@@ -106,9 +120,9 @@ const OurWorks = () => {
           viewport={{ once: true }}
           className="works-header"
         >
-          <div className="badge">Our Portfolio</div>
-          <h2>Featured Works</h2>
-          <p>Discover our commitment to excellence through our showcase of premium detailing services</p>
+          <div className="badge">{t('works')}</div>
+          <h2>{t('worksTitle')}</h2>
+          <p>{t('worksSubtitle')}</p>
         </motion.div>
 
         <motion.div
@@ -124,7 +138,7 @@ const OurWorks = () => {
               className={`filter-button ${activeFilter === filter.id ? 'active' : ''}`}
               onClick={() => setActiveFilter(filter.id)}
             >
-              {filter.label}
+              {t(filter.label)}
             </button>
           ))}
         </motion.div>
@@ -154,7 +168,7 @@ const OurWorks = () => {
                 <div className="work-overlay">
                   <h3 className="work-title">{work.title}</h3>
                   <span className="work-category">
-                    {filters.find(f => f.id === work.category)?.label}
+                    {t(work.description)}
                   </span>
                 </div>
               </motion.div>

@@ -27,13 +27,21 @@ const Navbar = (props) => {
                     </Link>
                 </div>
 
-                <div className={`flex lg:hidden ${mobileMenu && "opacity-0"}`}>
-                    <button type="button" onClick={() => setMobileMenu(current => !current)} className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-gray-300 hover:bg-white/5 transition-all duration-300">
-                        <span className="sr-only">Open main menu</span>
-                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
+                <div className="flex items-center gap-4">
+                    <button 
+                        onClick={toggleLanguage}
+                        className="text-sm font-medium text-gray-200 hover:text-white transition-colors duration-300 whitespace-nowrap lg:hidden"
+                    >
+                        {language === 'tr' ? 'EN' : 'TR'}
                     </button>
+                    <div className={`flex lg:hidden ${mobileMenu ? "opacity-0" : ""}`}>
+                        <button type="button" onClick={() => setMobileMenu(current => !current)} className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-gray-300 hover:bg-white/5 transition-all duration-300">
+                            <span className="sr-only">Open main menu</span>
+                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                 <div className="hidden lg:flex lg:gap-x-4 xl:gap-x-8">
@@ -54,9 +62,9 @@ const Navbar = (props) => {
             </nav>
 
             {/* Mobile menu */}
-            <div className={`fixed inset-0 z-[200] ${!mobileMenu && "hidden"}`} role="dialog" aria-modal="true">
-                <div onClick={() => setMobileMenu(false)} className="fixed inset-0 bg-black/60 backdrop-blur-sm"></div>
-                <div className="fixed inset-y-0 right-0 z-[201] w-full overflow-y-auto bg-[#0f1115] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10 transform transition-all duration-300 ease-in-out">
+            <div className={`fixed inset-0 z-[200] ${!mobileMenu && "pointer-events-none opacity-0"}`} role="dialog" aria-modal="true">
+                <div onClick={() => setMobileMenu(false)} className={`fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${!mobileMenu && "opacity-0"}`}></div>
+                <div className={`fixed inset-y-0 right-0 z-[201] w-full overflow-y-auto bg-[#0f1115] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10 transform transition-all duration-300 ease-in-out ${!mobileMenu ? "translate-x-full" : "translate-x-0"}`}>
                     <div className="flex items-center justify-between">
                         <Link to="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">DetailinX</span>
@@ -86,12 +94,14 @@ const Navbar = (props) => {
                                         {item.name}
                                     </Link>
                                 ))}
-                                <button 
-                                    onClick={toggleLanguage}
-                                    className="block -mx-3 rounded-lg px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-300 w-full text-left"
-                                >
-                                    {language === 'tr' ? 'English' : 'Türkçe'}
+                                <div className="flex justify-end px-3">
+                                    <button 
+                                        onClick={toggleLanguage}
+                                        className="text-sm font-medium text-gray-200 hover:text-white transition-colors duration-300 whitespace-nowrap"
+                                    >
+                                        {language === 'tr' ? 'EN' : 'TR'}
                                     </button>
+                                </div>
                             </div>
                         </div>
                     </div>

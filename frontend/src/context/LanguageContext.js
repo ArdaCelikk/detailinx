@@ -9,47 +9,51 @@ const translations = {
         contact: 'İletişim',
 
         // Hero Section
-        heroTitle: 'Premium Araç Bakım ve Detaylama',
-        heroSubtitle: 'Aracınıza profesyonel dokunuş',
+        heroTitle: 'Premium Araç Bakım ve Detaylı Temizlik',
+        heroSubtitle: 'Aracınıza profesyonel dokunuşlar',
         bookAppointment: 'Randevu Al',
         exploreServices: 'Hizmetleri Keşfet',
-        happyClients: 'Mutlu Müşteri',
+        happyClients: 'Temizlik',
         yearsExperience: 'Yıllık Deneyim',
         satisfactionRate: 'Memnuniyet',
         trustedService: 'Güvenilir Hizmet',
-        topRatedService: 'En çok tercih edilen detaylama servisi',
-        premiumDetailing: 'Premium Detaylama',
-        premiumAutoCare: 'Premium Araç Bakımı',
+        topRatedService: 'En çok tercih edilen detaylı temizlik servisi',
+        premiumDetailing: 'Premium Detaylı Temizlik',
+        premiumAutoCare: 'Profesyonel Araç Bakımı',
 
         // Services Section
         servicesTitle: 'Hizmetlerimiz',
-        servicesSubtitle: 'Profesyonel detaylama hizmetlerimizle tanışın',
+        servicesSubtitle: 'Profesyonel araç bakım hizmetlerimizle tanışın',
         serviceDetail: 'Detaylı Bilgi',
         experienceFinest: 'En iyi araç bakım hizmetlerini deneyimleyin',
-        
+
         // Service Features
         deepCleaning: 'Derinlemesine Temizlik',
         leatherCare: 'Deri Bakımı',
         odorRemoval: 'Koku Giderme',
         handWash: 'Elle Yıkama',
-        clayBar: 'Kil Uygulaması',
+        clayBar: 'Demir Tozu Temizliği',
         paintSealant: 'Boya Koruma',
         scratchRemoval: 'Çizik Giderme',
-        swirlRemoval: 'Swirl Giderme',
-        paintEnhancement: 'Boya İyileştirme',
+        swirlRemoval: 'Kil Uygulaması',
+        paintEnhancement: 'Seramik Kaplama',
         uvProtection: 'UV Koruması',
         hydrophobic: 'Su İticilik',
-        warranty: '5 Yıl Garanti',
-        
-        // Service Types
-        ceramicCoating: 'Seramik Kaplama',
+        warranty: 'Yeni Görünüm',
+
+        // Service Types and Descriptions
+        ceramicCoating: 'Profesyonel Bakım',
         ceramicDesc: 'Uzun süreli koruma ve parlaklık için profesyonel seramik kaplama',
         paintProtection: 'Boya Koruma',
         paintDesc: 'Aracınızın boyasını dış etkenlere karşı koruyun',
-        interiorDetail: 'İç Detay',
+        paintCorrection: 'Boya Düzeltme',
+        interiorDetail: 'Detaylı İç Temizlik',
+        detailedCleaning: 'Detaylı Temizlik',
         interiorDesc: 'Aracınızın içi için kapsamlı temizlik ve bakım',
-        exteriorDetail: 'Dış Detay',
+        exteriorDetail: 'Detaylı Dış Temizlik',
         exteriorDesc: 'Aracınızın dışı için profesyonel temizlik ve bakım',
+        mobileDetailing: 'Detaylı Dış Temizlik',
+        fullDetailing: 'Detaylı İç Temizlik',
 
         // Why Choose Us
         whyChooseUs: 'Neden Bizi Seçmelisiniz',
@@ -57,15 +61,40 @@ const translations = {
         expertTeam: 'Uzman Ekip',
         expertTeamDesc: 'Yılların deneyimine sahip sertifikalı profesyoneller',
         premiumProducts: 'Premium Ürünler',
-        premiumProductsDesc: 'Sadece en kaliteli detaylama ürünlerini kullanıyoruz',
+        premiumProductsDesc: 'Sadece en kaliteli detaylı temizlik ürünlerini kullanıyoruz',
         timelyService: 'Zamanında Hizmet',
         timelyServiceDesc: 'Kaliteden ödün vermeden verimli hizmet',
         satisfaction: 'Memnuniyet Garantisi',
         satisfactionDesc: 'Müşteri memnuniyeti önceliğimizdir',
 
+        // Works Section
+        worksTitle: 'Çalışmalarımız',
+        worksSubtitle: 'Premium detaylı bakım hizmetlerimizden örnekler',
+        allWorks: 'Tüm Çalışmalar',
+        filterByCategory: 'Kategoriye Göre Filtrele',
+        noWorksFound: 'Seçili kategoride çalışma bulunamadı.',
+        viewDetails: 'Detayları Görüntüle',
+
+        // Contact Page
+        contactTitle: 'İletişime Geçin',
+        contactSubtitle: 'Premium detailing hizmetlerimiz için bizimle iletişime geçin',
+        sendMessage: 'Mesaj Gönderin',
+        formSubtitle: 'Formu doldurun, en kısa sürede size dönüş yapalım',
+        yourName: 'Adınız',
+        yourEmail: 'E-posta Adresiniz',
+        yourPhone: 'Telefon Numaranız',
+        selectService: 'Hizmet Seçin',
+        yourMessage: 'Mesajınız',
+        contactInfo: 'İletişim Bilgileri',
+        contactInfoSubtitle: 'Premium detailing hizmetleri için bizimle iletişime geçin',
+        visitUs: 'Adresimiz',
+        callUs: 'Bizi Arayın',
+        emailUs: 'E-posta Gönderin',
+        followUs: 'Bizi Takip Edin',
+
         // Footer
         footerAbout: 'Hakkımızda',
-        footerAboutText: 'Premium araç bakım ve detaylama hizmetleri sunuyoruz. Profesyonel ekibimiz ve en kaliteli ürünlerle aracınıza özel çözümler.',
+        footerAboutText: 'Premium araç bakım ve detaylı temizlik hizmetleri sunuyoruz. Profesyonel ekibimiz ve en kaliteli ürünlerle aracınıza özel çözümler.',
         footerAddress: 'Adres',
         footerAddressText: 'İstanbul, Türkiye',
         footerWorkingHours: 'Çalışma Saatleri',
@@ -87,106 +116,70 @@ const translations = {
         footerEmailPlaceholder: 'E-posta adresinizi girin',
         footerSubscribe: 'Abone Ol',
 
-        // Car Gallery
+        // Cars Gallery Page
         carsTitle: 'Araç Bilgi Sistemi',
         carsSubtitle: 'Aracınızın detaylarını görüntülemek için ID numarasını girin veya galeriden seçim yapın',
         searchPlaceholder: 'Araç ID ile arama yapın...',
-        
-        // Car Services
-        ceramicCoating: 'Seramik Kaplama',
-        paintProtection: 'Boya Koruma',
-        paintCorrection: 'Boya Düzeltme',
-        interiorDetail: 'İç Detaylama',
-
-        // Works Page
-        works: 'Fotoğraf Galerisi',
-        worksSubtitle: 'Detaylı araç bakım ve koruma çalışmalarımızdan örnekler',
-        allWorks: 'Tümü',
-        filterByCategory: 'Kategoriye Göre Filtrele',
-        noWorksFound: 'Seçili kategoride çalışma bulunamadı.',
-        viewDetails: 'Detayları Görüntüle',
-        
-        // Categories
-        ceramicCoating: 'Seramik Kaplama',
-        paintProtection: 'Boya Koruma',
-        paintCorrection: 'Boya Düzeltme',
-        interiorDetail: 'İç Detaylama',
-        
-        // Descriptions
-        ceramicDesc: 'Profesyonel seramik kaplama ve uzun süreli koruma',
-        paintDesc: 'Boya koruma ve iyileştirme uygulaması',
-        interiorDesc: 'Kapsamlı iç detaylama ve bakım işlemi',
-
-        // Contact Page
-        contactTitle: 'İletişime Geçin',
-        contactSubtitle: 'Premium detaylama hizmetlerimiz için bizimle iletişime geçin',
-        sendMessage: 'Mesaj Gönderin',
-        formSubtitle: 'Formu doldurun, en kısa sürede size dönüş yapalım',
-        yourName: 'Adınız',
-        yourEmail: 'E-posta Adresiniz',
-        yourPhone: 'Telefon Numaranız',
-        selectService: 'Hizmet Seçin',
-        mobileDetailing: 'Mobil Detaylama',
-        fullDetailing: 'Tam Detaylama',
-        paintCorrection: 'Boya Düzeltme',
-        ceramicCoating: 'Seramik Kaplama',
-        yourMessage: 'Mesajınız',
-        contactInfo: 'İletişim Bilgileri',
-        contactInfoSubtitle: 'Premium detaylama hizmetleri için bizimle iletişime geçin',
-        visitUs: 'Adresimiz',
-        callUs: 'Bizi Arayın',
-        emailUs: 'E-posta Gönderin',
-        followUs: 'Bizi Takip Edin'
+        backToGallery: 'Galeri\'ye Dön',
+        nextService: 'Sonraki Bakım Tarihi',
+        serviceHistory: 'Yapılan İşlemler',
+        photoGallery: 'Fotoğraf Galerisi',
+        duration: 'Süre',
+        usedProducts: 'Kullanılan Ürünler'
     },
     en: {
         // Navigation
         cars: 'Cars',
-        works: 'Gallery',
-        services: 'Services',
-        contact: 'Contact',
+        works: 'Photo Gallery',
+        services: 'Our Services',
+        contact: 'Contact Us',
 
         // Hero Section
-        heroTitle: 'Premium Vehicle Care and Detailing',
-        heroSubtitle: 'Professional touch for your vehicle',
+        heroTitle: 'Premium Vehicle Care and Detailed Cleaning',
+        heroSubtitle: 'Professional touches for your vehicle',
         bookAppointment: 'Book Appointment',
         exploreServices: 'Explore Services',
-        happyClients: 'Happy Clients',
+        happyClients: 'Cleaning',
         yearsExperience: 'Years Experience',
         satisfactionRate: 'Satisfaction',
         trustedService: 'Trusted Service',
-        topRatedService: 'Top-rated detailing service',
-        premiumDetailing: 'Premium Detailing',
-        premiumAutoCare: 'Premium Auto Care',
+        topRatedService: 'Most preferred detailed cleaning service',
+        premiumDetailing: 'Premium Detailed Cleaning',
+        premiumAutoCare: 'Professional Vehicle Care',
 
         // Services Section
         servicesTitle: 'Our Services',
-        servicesSubtitle: 'Discover our professional detailing services',
+        servicesSubtitle: 'Meet our professional vehicle care services',
         serviceDetail: 'View Details',
-        experienceFinest: 'Experience the finest car care services',
-        
+        experienceFinest: 'Experience the best vehicle care services',
+
         // Service Features
         deepCleaning: 'Deep Cleaning',
         leatherCare: 'Leather Care',
         odorRemoval: 'Odor Removal',
         handWash: 'Hand Wash',
-        clayBar: 'Clay Bar',
-        paintSealant: 'Paint Sealant',
+        clayBar: 'Iron Dust Cleaning',
+        paintSealant: 'Paint Protection',
         scratchRemoval: 'Scratch Removal',
-        swirlRemoval: 'Swirl Removal',
-        paintEnhancement: 'Paint Enhancement',
+        swirlRemoval: 'Clay Application',
+        paintEnhancement: 'Ceramic Coating',
         uvProtection: 'UV Protection',
-        hydrophobic: 'Hydrophobic',
-        warranty: '5-Year Warranty',
-        
-        // Service Types
-        ceramicCoating: 'Ceramic Coating',
+        hydrophobic: 'Water Repellent',
+        warranty: 'New Look',
+
+        // Service Types and Descriptions
+        ceramicCoating: 'Professional Care',
         ceramicDesc: 'Professional ceramic coating for long-lasting protection and shine',
         paintProtection: 'Paint Protection',
         paintDesc: 'Protect your vehicle\'s paint from external factors',
-        interiorDetail: 'Interior Detailing',
+        paintCorrection: 'Paint Correction',
+        interiorDetail: 'Detailed Interior Cleaning',
+        detailedCleaning: 'Detailed Cleaning',
         interiorDesc: 'Comprehensive cleaning and care for your vehicle\'s interior',
-        exteriorDetail: 'Exterior Detailing',
+        exteriorDetail: 'Detailed Exterior Cleaning',
         exteriorDesc: 'Professional cleaning and care for your vehicle\'s exterior',
+        mobileDetailing: 'Detailed Exterior Cleaning',
+        fullDetailing: 'Detailed Interior Cleaning',
 
         // Why Choose Us
         whyChooseUs: 'Why Choose Us',
@@ -194,11 +187,36 @@ const translations = {
         expertTeam: 'Expert Team',
         expertTeamDesc: 'Certified professionals with years of experience',
         premiumProducts: 'Premium Products',
-        premiumProductsDesc: 'Using only the highest quality detailing products',
+        premiumProductsDesc: 'Using only the highest quality detailed cleaning products',
         timelyService: 'Timely Service',
         timelyServiceDesc: 'Efficient service without compromising quality',
-        satisfaction: 'Satisfaction Guaranteed',
-        satisfactionDesc: 'Your satisfaction is our top priority',
+        satisfaction: 'Satisfaction Guarantee',
+        satisfactionDesc: 'Customer satisfaction is our priority',
+
+        // Works Section
+        worksTitle: 'Our Works',
+        worksSubtitle: 'Examples from our premium detailing services',
+        allWorks: 'All Works',
+        filterByCategory: 'Filter by Category',
+        noWorksFound: 'No works found in selected category.',
+        viewDetails: 'View Details',
+
+        // Contact Page
+        contactTitle: 'Contact Us',
+        contactSubtitle: 'Contact us for premium detailing services',
+        sendMessage: 'Send Message',
+        formSubtitle: 'Fill out the form and we\'ll get back to you shortly',
+        yourName: 'Your Name',
+        yourEmail: 'Your Email',
+        yourPhone: 'Your Phone',
+        selectService: 'Select Service',
+        yourMessage: 'Your Message',
+        contactInfo: 'Contact Information',
+        contactInfoSubtitle: 'Get in touch with us for premium detailing services',
+        visitUs: 'Visit Us',
+        callUs: 'Call Us',
+        emailUs: 'Email Us',
+        followUs: 'Follow Us',
 
         // Footer
         footerAbout: 'About Us',
@@ -224,56 +242,16 @@ const translations = {
         footerEmailPlaceholder: 'Enter your email',
         footerSubscribe: 'Subscribe',
 
-        // Car Gallery
+        // Cars Gallery Page
         carsTitle: 'Vehicle Information System',
-        carsSubtitle: 'Enter the vehicle ID or select from the gallery to view details',
+        carsSubtitle: 'Enter the ID number or select from the gallery to view your vehicle details',
         searchPlaceholder: 'Search by vehicle ID...',
-        
-        // Car Services
-        ceramicCoating: 'Ceramic Coating',
-        paintProtection: 'Paint Protection',
-        paintCorrection: 'Paint Correction',
-        interiorDetail: 'Interior Detailing',
-
-        // Works Page
-        works: 'Photo Gallery',
-        worksSubtitle: 'Examples from our detailed vehicle care and protection works',
-        allWorks: 'All',
-        filterByCategory: 'Filter by Category',
-        noWorksFound: 'No works found in selected category.',
-        viewDetails: 'View Details',
-        
-        // Categories
-        ceramicCoating: 'Ceramic Coating',
-        paintProtection: 'Paint Protection',
-        paintCorrection: 'Paint Correction',
-        interiorDetail: 'Interior Detailing',
-        
-        // Descriptions
-        ceramicDesc: 'Professional ceramic coating and long-term protection',
-        paintDesc: 'Paint protection and enhancement application',
-        interiorDesc: 'Comprehensive interior detailing and maintenance',
-
-        // Contact Page
-        contactTitle: 'Get In Touch',
-        contactSubtitle: 'Contact us for premium detailing services',
-        sendMessage: 'Send Message',
-        formSubtitle: 'Fill out the form and we\'ll get back to you shortly',
-        yourName: 'Your Name',
-        yourEmail: 'Your Email',
-        yourPhone: 'Your Phone',
-        selectService: 'Select Service',
-        mobileDetailing: 'Mobile Detailing',
-        fullDetailing: 'Full Detailing',
-        paintCorrection: 'Paint Correction',
-        ceramicCoating: 'Ceramic Coating',
-        yourMessage: 'Your Message',
-        contactInfo: 'Contact Information',
-        contactInfoSubtitle: 'Get in touch with us for premium detailing services',
-        visitUs: 'Visit Us',
-        callUs: 'Call Us',
-        emailUs: 'Email Us',
-        followUs: 'Follow Us'
+        backToGallery: 'Back to Gallery',
+        nextService: 'Next Service Date',
+        serviceHistory: 'Service History',
+        photoGallery: 'Photo Gallery',
+        duration: 'Duration',
+        usedProducts: 'Products Used'
     }
 };
 

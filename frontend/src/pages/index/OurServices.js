@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import './OurServices.css';
+import { Link } from 'react-router-dom';
 
 const OurServices = () => {
     const { t } = useLanguage();
@@ -51,9 +52,9 @@ const OurServices = () => {
         <section className="services-section">
             <div className="pattern-overlay"></div>
             <div className="gradient-overlay"></div>
-            
+
             <div className="container">
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
@@ -93,10 +94,12 @@ const OurServices = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className="service-button">
-                                {t('serviceDetail')}
-                                <i className="fas fa-arrow-right"></i>
-                            </button>
+                            <Link to="/hizmetler">
+                                <button className="service-button">
+                                    {t('serviceDetail')}
+                                    <i className="fas fa-arrow-right"></i>
+                                </button>
+                            </Link>
                         </motion.div>
                     ))}
                 </motion.div>
