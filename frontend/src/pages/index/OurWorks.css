@@ -1,8 +1,21 @@
 .works-section {
   padding: 120px 0;
-  background-color: var(--darker-bg);
+  background-color: var(--dark-bg);
   position: relative;
   overflow: hidden;
+}
+
+.works-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, 
+    rgba(0, 102, 255, 0.1) 0%, 
+    rgba(0, 102, 255, 0.05) 25%, 
+    transparent 50%);
 }
 
 .works-header {
@@ -64,11 +77,13 @@
   background: var(--primary-blue);
   color: white;
   border-color: var(--primary-blue);
+  box-shadow: 0 8px 15px rgba(0, 102, 255, 0.2);
 }
 
 .filter-button:hover:not(.active) {
   background: rgba(0, 102, 255, 0.1);
   color: var(--light-text);
+  transform: translateY(-2px);
 }
 
 .works-grid {
@@ -85,7 +100,10 @@
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
 }
 
 .work-item.large {
@@ -105,6 +123,8 @@
 
 .work-item:hover {
   transform: translateY(-10px);
+  border-color: rgba(0, 102, 255, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .work-item:hover .work-image {
@@ -116,16 +136,17 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    transparent 100%
+    rgba(5, 5, 5, 0.95) 0%,
+    rgba(10, 10, 10, 0.8) 50%,
+    rgba(10, 10, 10, 0.4) 100%
   );
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 2rem;
+  backdrop-filter: blur(5px);
 }
 
 .work-item:hover .work-overlay {
@@ -140,6 +161,7 @@
   transform: translateY(20px);
   opacity: 0;
   transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .work-category {
@@ -148,6 +170,7 @@
   transform: translateY(20px);
   opacity: 0;
   transition: all 0.3s ease 0.1s;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .work-item:hover .work-title,
@@ -175,6 +198,14 @@
 }
 
 @media (max-width: 768px) {
+  .works-section {
+    padding: 80px 0;
+  }
+
+  .works-header h2 {
+    font-size: 2rem;
+  }
+
   .works-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -192,4 +223,13 @@
   .work-title {
     font-size: 1.25rem;
   }
-} 
+
+  .filter-buttons {
+    gap: 0.5rem;
+  }
+
+  .filter-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

@@ -2,6 +2,22 @@ import React, { createContext, useContext, useState } from 'react';
 
 const translations = {
     tr: {
+
+        trueProducts: 'Premium Ürünler',
+        paintCorrectionDesc: 'Boya üzerindeki çiziklerin düzeltilmesi',
+        ceramicDesc: 'Uzun süreli koruma ve parlaklık için profesyonel bakım',
+        clayBarUse: 'Kil Uygulaması',
+        swirlRemovall: 'Çizik Düzeltme',
+        paintShining: 'Boya parlatma',
+        leatherCareDesc: 'Aracınızın derileri için bakım',
+        odorRemovalDesc: 'Araç içerisindeki koku sorununu giderme',
+        odorCauseFinding: 'Koku Nedenini Bulma',
+        letherPartsCleaning: 'Deri Parçalarının Temizliği',
+        handWashDesc: 'Aracınızın dışı için profesyonel teknikler ile temizlik ve bakım',
+        detailedWheelCleaning: 'Detaylı Jant Temizliği',
+        detailedWheelCleaningDesc: 'Detaylı jant temizliği için demir tozu uygulaması',
+        quickWaxing: 'Hızlı Cila',
+        quickWaxingDesc: 'Hızlı cila ile aracınızın parlaklığını korumak ve arttırmak',
         // Navigation
         cars: 'Arabalar',
         works: 'Fotoğraf Galerisi',
@@ -43,7 +59,7 @@ const translations = {
 
         // Service Types and Descriptions
         ceramicCoating: 'Profesyonel Bakım',
-        ceramicDesc: 'Uzun süreli koruma ve parlaklık için profesyonel seramik kaplama',
+        ceramicDesc: 'Uzun süreli koruma ve parlaklık için profesyonel bakım',
         paintProtection: 'Boya Koruma',
         paintDesc: 'Aracınızın boyasını dış etkenlere karşı koruyun',
         paintCorrection: 'Boya Düzeltme',
@@ -125,9 +141,30 @@ const translations = {
         serviceHistory: 'Yapılan İşlemler',
         photoGallery: 'Fotoğraf Galerisi',
         duration: 'Süre',
-        usedProducts: 'Kullanılan Ürünler'
+        usedProducts: 'Kullanılan Ürünler',
+
+        // Process Steps
+        preparation: 'Hazırlık Aşaması',
+        application: 'Uygulama Süreci',
+        maintenance: 'Bakım Önerileri'
     },
     en: {
+        trueProducts: 'Premium Products',
+        paintCorrectionDesc: 'Correction of scratches on the paint',
+        ceramicDesc: 'Professional care for long-lasting protection and shine',
+        clayBarUse: 'Clay Bar Application',
+        swirlRemovall: 'Swirl Removal',
+        paintShining: 'Paint Polishing',
+        leatherCareDesc: 'Care for your vehicle\'s leather surfaces',
+        odorRemovalDesc: 'Eliminating odor problems inside the vehicle',
+        odorCauseFinding: 'Identifying Odor Source',
+        letherPartsCleaning: 'Leather Parts Cleaning',
+        handWashDesc: 'Professional cleaning and care for your vehicle\'s exterior using expert techniques',
+        detailedWheelCleaning: 'Detailed Wheel Cleaning',
+        detailedWheelCleaningDesc: 'Iron dust removal application for detailed wheel cleaning',
+        quickWaxing: 'Quick Waxing',
+        quickWaxingDesc: 'Maintain and enhance your vehicle\'s shine with quick waxing',
+
         // Navigation
         cars: 'Cars',
         works: 'Photo Gallery',
@@ -251,7 +288,12 @@ const translations = {
         serviceHistory: 'Service History',
         photoGallery: 'Photo Gallery',
         duration: 'Duration',
-        usedProducts: 'Products Used'
+        usedProducts: 'Products Used',
+
+        // Process Steps
+        preparation: 'Preparation Phase',
+        application: 'Application Process',
+        maintenance: 'Maintenance Tips'
     }
 };
 

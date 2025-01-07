@@ -74,7 +74,7 @@ function CarDetails() {
                                     transition={{ duration: 0.5 }}
                                 >
                                     <Link 
-                                        to="/cars" 
+                                        to="/arabalar" 
                                         className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-6 transition-colors duration-300"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
