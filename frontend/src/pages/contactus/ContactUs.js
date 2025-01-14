@@ -221,7 +221,7 @@ const ContactUs = () => {
               viewport={{ once: true }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.443832610288!2d28.97206231541454!3d41.02557897929921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9e7a7777c43%3A0x4c76cf3dcc8b330b!2sIstanbul%2C%20Turkey!5e0!3m2!1sen!2s!4v1620147382772!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62043.48193926051!2d33.76113249942997!3d35.18756261969228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de4af1aedef7df%3A0x4dc0a05592ee1b30!2zQWxhbmnDp2k!5e0!3m2!1sen!2s!4v1736878746949!5m2!1sen!2s"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}

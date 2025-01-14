@@ -113,7 +113,7 @@ const Footer = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <div className="newsletter-content">
+                    {/* <div className="newsletter-content">
                         <h4>{t('footerNewsletter')}</h4>
                         <p>{t('footerNewsletterText')}</p>
                         <form className="newsletter-form">
@@ -123,7 +123,7 @@ const Footer = () => {
                                 <i className="fas fa-arrow-right"></i>
                             </button>
                         </form>
-                    </div>
+                    </div> */}
                 </motion.div>
 
                 {/* Footer Bottom */}
