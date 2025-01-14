@@ -15,7 +15,6 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 120px 0 60px;
   width: 100%;
 }
@@ -26,10 +25,16 @@
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 0;
+  background: url('../../../public/assets/index/herosection_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .gradient-overlay {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -57,8 +62,6 @@
   padding: 0 2rem;
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: center;
 }
 
 .hero-content {
@@ -285,13 +288,12 @@
 
 @media (max-width: 1024px) {
   .modern-hero {
-    padding: 80px 0;
-    min-height: 100vh;
+    padding: 100px 0;
   }
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .text-content {
@@ -304,20 +306,6 @@
     margin-right: auto;
   }
 
-  .stats-row {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-
-  .stat-divider {
-    display: none;
-  }
-
-  .button-group {
-    justify-content: center;
-  }
-
   .image-content {
     display: none;
   }
@@ -325,77 +313,27 @@
 
 @media (max-width: 768px) {
   .modern-hero {
-    padding: 60px 0;
-    min-height: 100vh;
-    justify-content: center;
-  }
-
-  .content-container {
-    padding: 0 1.5rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  .text-content {
-    margin: 0 auto;
+    padding: 80px 0;
   }
 
   .text-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     line-height: 1.2;
-    margin-bottom: 1rem;
   }
 
   .text-content p {
     font-size: 1rem;
     margin-bottom: 2rem;
-    padding: 0 1rem;
-  }
-
-  .stats-row {
-    margin-bottom: 2rem;
-    padding: 0 1rem;
   }
 
   .button-group {
     width: 100%;
     flex-direction: column;
     gap: 1rem;
-    padding: 0 1rem;
   }
 
   .btn-book, .btn-explore {
     width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .modern-hero {
-    padding: 40px 0;
-  }
-
-  .content-container {
-    padding: 0 1rem;
-  }
-
-  .text-content h1 {
-    font-size: 2rem;
-  }
-
-  .text-content p {
-    font-size: 0.95rem;
-  }
-
-  .stats-row {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .stat-item {
-    width: 100%;
-    align-items: center;
   }
 }
 

@@ -29,11 +29,11 @@ const IndexPage = () => {
           <div className="container">
             <h2>{t('whyChooseUs')}</h2>
             <div className="features-grid">
-              <div className="feature">
+              {/* <div className="feature">
                 <i className="fas fa-award"></i>
                 <h3>{t('expertTeam')}</h3>
                 <p>{t('expertTeamDesc')}</p>
-              </div>
+              </div> */}
               <div className="feature">
                 <i className="fas fa-spray-can"></i>
                 <h3>{t('premiumProducts')}</h3>

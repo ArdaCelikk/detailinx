@@ -18,34 +18,32 @@ const OurWorks = () => {
   const works = [
     {
       id: 1,
-      title: "BMW M4 Competition",
-      category: "mobile",
-      image: "/assets/index/itsnotalwaysintheshop.jpg",
-      description: "mobileDetailing",
+      title: "Mercedes",
+      category: "detailing",
+      image: "/assets/index/interior.jpg",
+      description: "fullDetailing",
       date: "2023-12-15",
       size: "large"
     },
     {
       id: 2,
       title: "Mercedes-AMG GT",
-      category: "polish",
+      category: "mobile",
       image: "/assets/index/brushing.jpg",
-      description: "paintCorrection",
+      description: "mobileDetailing",
       date: "2023-12-10",
       size: "small"
     },
     {
       id: 3,
-      title: "Porsche 911 GT3",
-      category: "detailing",
+      title: "DetailinX",
       image: "/assets/index/logomockup1.jpg",
-      description: "fullDetailing",
       date: "2023-12-05",
       size: "small"
     },
     {
       id: 4,
-      title: "Audi RS6",
+      title: "Mercedes",
       category: "ceramic",
       image: "/assets/index/ceramicoating.webp",
       description: "ceramicCoating",
@@ -54,16 +52,16 @@ const OurWorks = () => {
     },
     {
       id: 5,
-      title: "BMW M5 CS",
-      category: "detailing",
+      title: "BMW",
+      category: "mobile",
       image: "/assets/index/cleancar.jpg",
-      description: "fullDetailing",
+      description: "mobileDetailing",
       date: "2023-11-28",
       size: "large"
     },
     {
       id: 6,
-      title: "Porsche Cayman GT4",
+      title: "Porsche",
       category: "polish",
       image: "/assets/index/polishing_2.jpg",
       description: "paintCorrection",
@@ -121,7 +119,7 @@ const OurWorks = () => {
           className="works-header"
         >
           <div className="badge">{t('works')}</div>
-          <h2>{t('worksTitle')}</h2>
+          {/* <h2>{t('worksTitle')}</h2> */}
           <p>{t('worksSubtitle')}</p>
         </motion.div>
 
@@ -163,6 +161,7 @@ const OurWorks = () => {
                 <img 
                   src={work.image} 
                   alt={work.title} 
+                  objectFit="contain"
                   className="work-image"
                 />
                 <div className="work-overlay">

@@ -100,10 +100,12 @@ function CarGallery() {
                             <div className="relative">
                                 <input
                                     type="text"
-                                    placeholder={t('searchPlaceholder')}
+                                    disabled
+                                    // placeholder={t('searchPlaceholder')}
+                                    placeholder='Yakında... / Soon...'
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                                    className="w-full cursor-not-allowed px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                                 />
                                 <div className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

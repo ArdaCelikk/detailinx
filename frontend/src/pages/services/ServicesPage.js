@@ -15,26 +15,26 @@ const ServicesPage = () => {
       title: t('ceramicCoating'),
       subtitle: t('ceramicDesc'),
       description: t('ceramicDesc'),
-      image: 'https://images.unsplash.com/photo-1573950940509-d924ee3fd345?q=80&w=1000',
+      image: '/assets/services/care_pic.jpg',
       icon: 'shield',
       benefits: [
         {
           icon: 'clock',
           title: t('warranty'),
           description: t('ceramicDesc'),
-          image: 'https://images.unsplash.com/photo-1596636478939-6c22e85a3ccc?q=80&w=1000'
+          image: '/assets/services/brandnew.jpg'
         },
         {
           icon: 'sun',
           title: t('uvProtection'),
           description: t('paintDesc'),
-          image: 'https://images.unsplash.com/photo-1607603750909-408e193868c7?q=80&w=1000'
+          image: '/assets/services/supra.jpg'
         },
         {
           icon: 'tint',
           title: t('hydrophobic'),
           description: t('paintDesc'),
-          image: 'https://images.unsplash.com/photo-1594051673969-172a6f721d3c?q=80&w=1000'
+          image: '/assets/services/black_bmw.jpg'
         }
       ],
       details: {
@@ -60,26 +60,26 @@ const ServicesPage = () => {
       title: t('paintProtection'),
       subtitle: t('paintDesc'),
       description: t('paintDesc'),
-      image: 'https://images.unsplash.com/photo-1558486012-817176f84c6d?q=80&w=1000',
+      image: '/assets/services/paintfix.jpg',
       icon: 'car',
       benefits: [
         {
           icon: 'shield-alt',
           title: t('scratchRemoval'),
           description: t('paintCorrectionDesc'),
-          image: 'https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?q=80&w=1000'
+          image: '/assets/services/swirls.jpg'
         },
         {
           icon: 'magic',
           title: t('paintEnhancement'),
           description: t('ceramicDesc'),
-          image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1000'
+          image: '/assets/services/ceramic_coated.webp'
         },
         {
           icon: 'flask',
           title: t('paintSealant'),
           description: t('paintDesc'),
-          image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000'
+          image: '/assets/services/paint_protection.webp'
         }
       ],
       details: {
@@ -104,26 +104,26 @@ const ServicesPage = () => {
       title: t('interiorDetail'),
       subtitle: t('interiorDesc'),
       description: t('interiorDesc'),
-      image: 'https://images.unsplash.com/photo-1570303345338-e1f1500c4f5a?q=80&w=1000',
+      image: '/assets/services/interiorbig.avif',
       icon: 'couch',
       benefits: [
         {
           icon: 'broom',
           title: t('deepCleaning'),
           description: t('interiorDesc'),
-          image: 'https://images.unsplash.com/photo-1507136566006-cfc505b114fc?q=80&w=1000'
+          image: '/assets/services/interior2.jpg'
         },
         {
           icon: 'pump-soap',
           title: t('leatherCare'),
           description: t('leatherCareDesc'),
-          image: 'https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=1000'
+          image: '/assets/services/interior1.webp'
         },
         {
           icon: 'wind',
           title: t('odorRemoval'),
           description: t('odorRemovalDesc'),
-          image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1000'
+          image: '/assets/services/interior3.jpg'
         }
       ],
       details: {
@@ -148,26 +148,26 @@ const ServicesPage = () => {
       title: t('exteriorDetail'),
       subtitle: t('exteriorDesc'),
       description: t('exteriorDesc'),
-      image: 'https://images.unsplash.com/photo-1535732820275-9ffd998cac22?q=80&w=1000',
+      image: '/assets/services/astonmartin.jpg',
       icon: 'car-side',
       benefits: [
         {
           icon: 'shower',
           title: t('handWash'),
           description: t('handWashDesc'),
-          image: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=1000'
+          image: '/assets/services/gtr.jpg'
         },
         {
           icon: 'magic',
           title: t('detailedWheelCleaning'),
           description: t('detailedWheelCleaningDesc'),
-          image: 'https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=1000'
+          image: '/assets/services/porshe.jpg'
         },
         {
           icon: 'spray-can',
           title: t('quickWaxing'),
           description: t('quickWaxingDesc'),
-          image: 'https://images.unsplash.com/photo-1605515298946-d062f2e9da53?q=80&w=1000'
+          image: '/assets/services/white_bmw.jpg'
         }
       ],
       details: {

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import './ModernHero.css';
+import { Link } from 'react-router-dom';
 
 const ModernHero = () => {
     const { t } = useLanguage();
@@ -15,7 +16,7 @@ const ModernHero = () => {
 
             <div className="content-container">
                 <div className="hero-content">
-                    <motion.div 
+                    <motion.div
                         className="text-content"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -24,7 +25,7 @@ const ModernHero = () => {
                         <div className="badge">{t('premiumAutoCare')}</div>
                         <h1>{t('heroTitle')}</h1>
                         <p>{t('heroSubtitle')}</p>
-                        
+
                         <div className="stats-row">
                             <div className="stat-item">
                                 <span className="stat-number">100%</span>
@@ -43,20 +44,24 @@ const ModernHero = () => {
                         </div>
 
                         <div className="button-group">
-                            <button className="btn-book">
-                                {t('bookAppointment')}
-                                <span className="btn-shine"></span>
-                            </button>
-                            <button className="btn-explore">
-                                {t('exploreServices')}
-                                <svg className="arrow" viewBox="0 0 24 24">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </button>
+                            <Link to="/iletisim">
+                                <button className="btn-book">
+                                    {t('bookAppointment')}
+                                    <span className="btn-shine"></span>
+                                </button>
+                            </Link>
+                            <Link to="/hizmetler">
+                                <button className="btn-explore">
+                                    {t('exploreServices')}
+                                    <svg className="arrow" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </Link>
                         </div>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         className="image-content"
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}

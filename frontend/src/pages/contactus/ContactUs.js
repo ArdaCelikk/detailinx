@@ -17,7 +17,7 @@ const ContactUs = () => {
         </svg>
       ),
       title: 'visitUs',
-      details: ['Gazimağusa', 'KKTC']
+      details: ['Gazimağusa - Alaniçi', 'KKTC']
     },
     {
       icon: (

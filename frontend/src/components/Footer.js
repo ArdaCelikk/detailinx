@@ -40,14 +40,14 @@ const Footer = () => {
                             <h3>DetailinX</h3>
                             <p>{t('footerAboutText')}</p>
                             <div className="social-links">
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                                <a href="https://www.instagram.com/detailin.x?igsh=MW9qb3ZxcnlrbmJi" target="_blank" rel="noopener noreferrer" className="social-link">
                                     <i className="fab fa-instagram"></i>
                                 </a>
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
                                     <i className="fab fa-facebook"></i>
                                 </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                                    <i className="fab fa-twitter"></i>
+                                <a href="https://www.youtube.com/channel/UCMzaiISatkPncHj9wCBQFFQ" target="_blank" rel="noopener noreferrer" className="social-link">
+                                    <i className="fab fa-youtube"></i>
                                 </a>
                             </div>
                         </div>
@@ -58,10 +58,10 @@ const Footer = () => {
                         <h4>{t('footerQuickLinks')}</h4>
                         <ul className="footer-links">
                             <li><Link to="/">{t('home')}</Link></li>
-                            <li><Link to="/services">{t('services')}</Link></li>
-                            <li><Link to="/about">{t('footerAbout')}</Link></li>
-                            <li><Link to="/gallery">{t('works')}</Link></li>
-                            <li><Link to="/contact">{t('contact')}</Link></li>
+                            <li><Link to="/arabalar">{t('cars')}</Link></li>
+                            <li><Link to="/galeri">{t('works')}</Link></li>
+                            <li><Link to="/hizmetler">{t('services')}</Link></li>
+                            <li><Link to="/iletisim">{t('contact')}</Link></li>
                         </ul>
                     </motion.div>
 
@@ -84,21 +84,22 @@ const Footer = () => {
                                 <i className="fas fa-phone"></i>
                                 <div>
                                     <span>{t('footerPhone')}</span>
-                                    <a href="tel:+905551234567">+90 (555) 123-4567</a>
+                                    <a href="tel:+905338310301">+90 (533) 831-0301</a>
                                 </div>
                             </li>
                             <li>
                                 <i className="fas fa-envelope"></i>
                                 <div>
                                     <span>{t('footerEmail')}</span>
-                                    <a href="mailto:info@detailinx.com">info@detailinx.com</a>
+                                    <a href="mailto:info@detailinx.com">info@detailinx.com</a> <br />
+                                    <a href="mailto:detailinx@hotmail.com">detailinx@hotmail.com</a>
                                 </div>
                             </li>
                             <li>
                                 <i className="fas fa-map-marker-alt"></i>
                                 <div>
                                     <span>{t('footerAddress')}</span>
-                                    <p>{t('footerAddressText')}</p>
+                                    <p>Gazimağusa-Alaniçi, KKTC</p>
                                 </div>
                             </li>
                         </ul>
@@ -129,10 +130,10 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <div className="footer-bottom-content">
                         <p>&copy; {new Date().getFullYear()} DetailinX. {t('footerRights')}</p>
-                        <div className="footer-bottom-links">
+                        {/* <div className="footer-bottom-links">
                             <a href="/privacy">{t('footerPrivacy')}</a>
                             <a href="/terms">{t('footerTerms')}</a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
