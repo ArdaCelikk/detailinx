@@ -1,0 +1,11 @@
+[2025-01-19T11:15:55.381Z] Uncaught Exception: Error: listen EADDRINUSE: address already in use :::80
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (/root/detailinx/frontend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/root/detailinx/frontend/server.js:39:5)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:173:12)
